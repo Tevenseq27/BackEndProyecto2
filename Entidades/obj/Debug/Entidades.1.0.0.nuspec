@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Entidades</id>
+    <version>1.0.0</version>
+    <authors>Entidades</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Microsoft.EntityFrameworkCore" version="3.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="3.1.1" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Bson" version="2.17.0" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Driver" version="2.17.0" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Driver.Core" version="2.17.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/netcoreapp3.1/libzstd.dll" buildAction="Content" />
+      <files include="any/netcoreapp3.1/snappy32.dll" buildAction="Content" />
+      <files include="any/netcoreapp3.1/snappy64.dll" buildAction="Content" />
+      <files include="any/netcoreapp3.1/libsnappy64.so" buildAction="Content" />
+      <files include="any/netcoreapp3.1/libzstd.so" buildAction="Content" />
+      <files include="any/netcoreapp3.1/libsnappy64.dylib" buildAction="Content" />
+      <files include="any/netcoreapp3.1/libzstd.dylib" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\dafny\source\repos\WebAppi\Entidades\bin\Debug\netcoreapp3.1\Entidades.runtimeconfig.json" target="lib\netcoreapp3.1\Entidades.runtimeconfig.json" />
+    <file src="C:\Users\dafny\source\repos\WebAppi\Entidades\bin\Debug\netcoreapp3.1\Entidades.dll" target="lib\netcoreapp3.1\Entidades.dll" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\win\native\libzstd.dll" target="content\libzstd.dll" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\win\native\libzstd.dll" target="contentFiles\any\netcoreapp3.1\libzstd.dll" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\win\native\snappy32.dll" target="content\snappy32.dll" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\win\native\snappy32.dll" target="contentFiles\any\netcoreapp3.1\snappy32.dll" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\win\native\snappy64.dll" target="content\snappy64.dll" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\win\native\snappy64.dll" target="contentFiles\any\netcoreapp3.1\snappy64.dll" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\linux\native\libsnappy64.so" target="content\libsnappy64.so" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\linux\native\libsnappy64.so" target="contentFiles\any\netcoreapp3.1\libsnappy64.so" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\linux\native\libzstd.so" target="content\libzstd.so" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\linux\native\libzstd.so" target="contentFiles\any\netcoreapp3.1\libzstd.so" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\osx\native\libsnappy64.dylib" target="content\libsnappy64.dylib" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\osx\native\libsnappy64.dylib" target="contentFiles\any\netcoreapp3.1\libsnappy64.dylib" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\osx\native\libzstd.dylib" target="content\libzstd.dylib" />
+    <file src="C:\Users\dafny\.nuget\packages\mongodb.driver.core\2.17.0\runtimes\osx\native\libzstd.dylib" target="contentFiles\any\netcoreapp3.1\libzstd.dylib" />
+  </files>
+</package>
