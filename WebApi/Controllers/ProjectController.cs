@@ -78,8 +78,9 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route(nameof(ConsultarChofer))]
-        public IEnumerable<Chofer> ConsultarChofer(Chofer P_Entidad)
+        public IEnumerable<Chofer> ConsultarChofer()
         {
+            Chofer P_Entidad = new Chofer();
             return _ilogica.ConsultarChofer(P_Entidad);
         }
 
