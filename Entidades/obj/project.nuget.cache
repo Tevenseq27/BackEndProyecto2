@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mghs/eyMXB/BzQUINWi21DXUeR6QynT9Uqxe+V81hhIxJ6XuH5emEE2g6Z1rTBUgnmWVMlbMHicFiHc1Fe98cA==",
+  "dgSpecHash": "+QLHjLUxVUMQQe1F604w5Fa9q28wi+pgBOrm16RFGXNO3NC56cGlzL0ONeza2xuBom/9afSw7q2pJuAAqIt9ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SSequeira\\Downloads\\Universidad\\Programación Avanzada\\Proyecto 2\\Proyecto2\\BackEndProyecto2\\WebAppi\\Entidades\\Entidades.csproj",
+  "projectFilePath": "C:\\Users\\SSequeira\\Source\\Repos\\BackEndProyecto2\\Entidades\\Entidades.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SSequeira\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\SSequeira\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

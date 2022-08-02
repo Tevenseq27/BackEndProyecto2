@@ -47,9 +47,10 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route(nameof(ConsultarBus))]
-        public IEnumerable<Bus> ConsultarBus(Bus P_Entidad)
+        public IEnumerable<Bus> ConsultarBus()
         {
-            return _ilogica.ConsultarBus(P_Entidad);
+            Bus P_Entidad = new Bus();
+            return _ilogica.ConsultarBus(P_Entidad).ToList();
         }
 
         [HttpPost]

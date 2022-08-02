@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GBCOb7aCxx/O3z3IBeJ8ape4g007FaiUcbFR+uGBL4l/vDkQXp8EwLomcceW0S91nFTNlLUaP2PiFVAi5PDZNQ==",
+  "dgSpecHash": "bcJireJpYu1041C3a0A3msDsPVD4LUW5ha1vxXn89PsjwmqrLmX8dja9o94ExcKD3AibQs8bmg5ShRpa79uSNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SSequeira\\Downloads\\Universidad\\Programación Avanzada\\Proyecto 2\\Proyecto2\\BackEndProyecto2\\WebAppi\\AccesoDatos\\AccesoDatos.csproj",
+  "projectFilePath": "C:\\Users\\SSequeira\\Source\\Repos\\BackEndProyecto2\\AccesoDatos\\AccesoDatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SSequeira\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\SSequeira\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
