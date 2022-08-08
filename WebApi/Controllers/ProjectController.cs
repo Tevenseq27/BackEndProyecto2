@@ -109,8 +109,9 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route(nameof(ConsultarPerfil))]
-        public IEnumerable<Perfil> ConsultarPerfil(Perfil P_Entidad)
+        public IEnumerable<Perfil> ConsultarPerfil()
         {
+            Perfil P_Entidad = new Perfil();
             return _ilogica.ConsultarPerfil(P_Entidad);
         }
 
