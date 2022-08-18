@@ -5420,11 +5420,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SSequeira\\Source\\Repos\\BackEndProyecto2\\AccesoDatos\\AccesoDatos.csproj",
+      "projectUniqueName": "C:\\Users\\SSequeira\\source\\repos\\BackEndProyecto2\\AccesoDatos\\AccesoDatos.csproj",
       "projectName": "AccesoDatos",
-      "projectPath": "C:\\Users\\SSequeira\\Source\\Repos\\BackEndProyecto2\\AccesoDatos\\AccesoDatos.csproj",
+      "projectPath": "C:\\Users\\SSequeira\\source\\repos\\BackEndProyecto2\\AccesoDatos\\AccesoDatos.csproj",
       "packagesPath": "C:\\Users\\SSequeira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SSequeira\\Source\\Repos\\BackEndProyecto2\\AccesoDatos\\obj\\",
+      "outputPath": "C:\\Users\\SSequeira\\source\\repos\\BackEndProyecto2\\AccesoDatos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5445,8 +5445,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\SSequeira\\Source\\Repos\\BackEndProyecto2\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\SSequeira\\Source\\Repos\\BackEndProyecto2\\Entidades\\Entidades.csproj"
+            "C:\\Users\\SSequeira\\source\\repos\\BackEndProyecto2\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\SSequeira\\source\\repos\\BackEndProyecto2\\Entidades\\Entidades.csproj"
             }
           }
         }

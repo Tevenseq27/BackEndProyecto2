@@ -140,8 +140,9 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route(nameof(ConsultarRecorrido))]
-        public IEnumerable<Recorrido> ConsultarRecorrido(Recorrido P_Entidad)
+        public IEnumerable<Recorrido> ConsultarRecorrido()
         {
+            Recorrido P_Entidad = new Recorrido();
             return _ilogica.ConsultarRecorrido(P_Entidad);
         }
 
@@ -170,8 +171,9 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route(nameof(ConsultarRuta))]
-        public IEnumerable<Ruta> ConsultarRuta(Ruta P_Entidad)
+        public IEnumerable<Ruta> ConsultarRuta()
         {
+            Ruta P_Entidad = new Ruta();
             return _ilogica.ConsultarRuta(P_Entidad);
         }
 

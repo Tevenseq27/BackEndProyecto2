@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+X8ish6mIASrrEF/6toWwWUXnaRssyjllDsWnaVu+R3YbKhP0Uhi8xv7MxsP05Rux40/8g/3Klfqtuli0uQUvA==",
+  "dgSpecHash": "NGI1rbxcN6BBCoSztyvJfkVz2V6oPTZTIhhyFJRFRnpGKraGPlr3CdZEiKZd8ol2bwi6H8LsQe4Uh50V8Rl5kA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SSequeira\\Source\\Repos\\BackEndProyecto2\\Negocio\\Negocio.csproj",
+  "projectFilePath": "C:\\Users\\SSequeira\\source\\repos\\BackEndProyecto2\\Negocio\\Negocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SSequeira\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\SSequeira\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

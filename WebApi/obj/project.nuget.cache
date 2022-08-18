@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tV6B0VkNE888CFOr9GpjQ4+x/lksZ61gaVYBKUzxWhLBKkLPA8/4oVYdGdrxPxW7V3GW6kYtLR2R65eW1RBzTw==",
+  "dgSpecHash": "WqJn5Sl31OvYU5WhL305NhY0BAophk6S+KIjcxtJvDyBOMVJy9KHPDuefNgmaqY71T7btmRmUDOEmhnk2dFH5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SSequeira\\Source\\Repos\\BackEndProyecto2\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\SSequeira\\source\\repos\\BackEndProyecto2\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SSequeira\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\SSequeira\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

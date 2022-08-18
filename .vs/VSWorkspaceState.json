@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Entidades",
+    "\\WebApi",
+    "\\WebApi\\Controllers"
   ],
   "SelectedNode": "\\BackEnd.sln",
   "PreviewInSolutionExplorer": false
