@@ -202,8 +202,9 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route(nameof(ConsultarUsuario))]
-        public IEnumerable<Usuario> ConsultarUsuario(Usuario P_Entidad)
+        public IEnumerable<Usuario> ConsultarUsuario()
         {
+            Usuario P_Entidad = new Usuario();
             return _ilogica.ConsultarUsuario(P_Entidad);
         }
 

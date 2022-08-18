@@ -5,15 +5,13 @@ namespace Entidades.Entities
 {
     public partial class Usuario
     {
-        public string IdUsuario { get; set; }
-        public string Nombre1Usuario { get; set; }
-        public string Nombre2Usuario { get; set; }
-        public string Apellido1Usuario { get; set; }
-        public string Apellido2Usuario { get; set; }
-        public string CorreoUsuario { get; set; }
-        public string ContraseñaUsuario { get; set; }
-        public int CodPerfilUsuario { get; set; }
+        public int ID_USUARIO { get; set; }
+        public string EMAIL { get; set; }
+        public string PASS { get; set; }
+        public string SALT { get; set; }
+        public string NOMBRE { get; set; }
+        public string APELLIDOS { get; set; }
+        public string TIPO { get; set; }
 
-        public virtual Perfil CodPerfilUsuarioNavigation { get; set; }
     }
 }

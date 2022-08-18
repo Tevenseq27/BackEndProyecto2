@@ -721,7 +721,7 @@ namespace AccesoDatos
         }
 
         #endregion
-
+//--------------------------------------------------------------------------------------------------------
         #region Usuario
         public bool AgregarUsuario(Usuario P_Entidad)
         {
@@ -756,7 +756,7 @@ namespace AccesoDatos
             {
                 contexto = new Proyecto2_SistemaRuteoContext();
 
-                if (P_Entidad.IdUsuario == null)
+                if (P_Entidad.ID_USUARIO == 0)
                 {
                     var consulta = (from x in contexto.Usuario
                                     select x).ToList();
@@ -772,7 +772,7 @@ namespace AccesoDatos
                 else
                 {
                     var consulta = (from x in contexto.Usuario
-                                    where x.IdUsuario.Equals(P_Entidad.IdUsuario)
+                                    where x.ID_USUARIO.Equals(P_Entidad.ID_USUARIO)
                                     select x).ToList();
 
                     if (consulta != null)
@@ -806,7 +806,7 @@ namespace AccesoDatos
             {
                 contexto = new Proyecto2_SistemaRuteoContext();
                 var consulta = (from x in contexto.Usuario
-                                where x.IdUsuario.Equals(P_Entidad.IdUsuario)
+                                where x.ID_USUARIO.Equals(P_Entidad.ID_USUARIO)
                                 select x).FirstOrDefault();
 
                 if (consulta != null)
@@ -838,17 +838,16 @@ namespace AccesoDatos
             {
                 contexto = new Proyecto2_SistemaRuteoContext();
                 var consulta = (from x in contexto.Usuario
-                                where x.IdUsuario.Equals(P_Entidad.IdUsuario)
+                                where x.ID_USUARIO.Equals(P_Entidad.ID_USUARIO)
                                 select x).FirstOrDefault();
                 if (consulta != null)
                 {
-                    consulta.Nombre1Usuario = P_Entidad.Nombre1Usuario;
-                    consulta.Nombre2Usuario = P_Entidad.Nombre2Usuario;
-                    consulta.Apellido1Usuario = P_Entidad.Apellido1Usuario;
-                    consulta.Apellido2Usuario = P_Entidad.Apellido2Usuario;
-                    consulta.CorreoUsuario = P_Entidad.CorreoUsuario;
-                    consulta.ContraseñaUsuario = P_Entidad.ContraseñaUsuario;
-                    consulta.CodPerfilUsuario = P_Entidad.CodPerfilUsuario;
+                    consulta.EMAIL = P_Entidad.EMAIL;
+                    consulta.PASS = P_Entidad.PASS;
+                    consulta.SALT = P_Entidad.SALT;
+                    consulta.NOMBRE = P_Entidad.NOMBRE;
+                    consulta.APELLIDOS = P_Entidad.APELLIDOS;
+                    consulta.TIPO = P_Entidad.TIPO;
                     contexto.SaveChanges();
                     resultado = true;
                 }
@@ -867,5 +866,6 @@ namespace AccesoDatos
         }
 
         #endregion
+        //--------------------------------------------------------------------------------------------------------
     }
 }
