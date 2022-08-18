@@ -294,147 +294,6 @@ namespace AccesoDatos
 
         #endregion
 
-        #region Perfil
-        public bool AgregarPerfil(Perfil P_Entidad)
-        {
-            bool resultado = false;
-            Proyecto2_SistemaRuteoContext contexto = null;
-
-            try
-            {
-                contexto = new Proyecto2_SistemaRuteoContext();
-                contexto.Perfil.Add(P_Entidad);
-                contexto.SaveChanges();
-                resultado = true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (contexto != null)
-                    contexto.Dispose();
-            }
-
-            return resultado;
-        }
-
-        public List<Perfil> ConsultarPerfil(Perfil P_Entidad)
-        {
-            Proyecto2_SistemaRuteoContext contexto = null;
-            List<Perfil> lista = new List<Perfil>();
-            try
-            {
-                contexto = new Proyecto2_SistemaRuteoContext();
-
-                if (P_Entidad.CodigoPerfil == 0)
-                {
-                    var consulta = (from x in contexto.Perfil
-                                    select x).ToList();
-
-                    if (consulta != null)
-                    {
-                        consulta.ForEach(x =>
-                        {
-                            lista.Add(x);
-                        });
-                    }
-                }
-                else
-                {
-                    var consulta = (from x in contexto.Perfil
-                                    where x.CodigoPerfil.Equals(P_Entidad.CodigoPerfil)
-                                    select x).ToList();
-
-                    if (consulta != null)
-                    {
-                        consulta.ForEach(x =>
-                        {
-                            lista.Add(x);
-                        });
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (contexto != null)
-                    contexto.Dispose();
-            }
-
-            return lista;
-        }
-
-        public bool EliminarPerfil(Perfil P_Entidad)
-        {
-            bool resultado = false;
-            Proyecto2_SistemaRuteoContext contexto = null;
-
-            try
-            {
-                contexto = new Proyecto2_SistemaRuteoContext();
-                var consulta = (from x in contexto.Perfil
-                                where x.CodigoPerfil.Equals(P_Entidad.CodigoPerfil)
-                                select x).FirstOrDefault();
-
-                if (consulta != null)
-                {
-                    contexto.Perfil.Remove(consulta);
-                    contexto.SaveChanges();
-                    resultado = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (contexto != null)
-                    contexto.Dispose();
-            }
-
-            return resultado;
-        }
-
-        public bool ModificarPerfil(Perfil P_Entidad)
-        {
-            bool resultado = false;
-            Proyecto2_SistemaRuteoContext contexto = null;
-
-            try
-            {
-                contexto = new Proyecto2_SistemaRuteoContext();
-                var consulta = (from x in contexto.Perfil
-                                where x.CodigoPerfil.Equals(P_Entidad.CodigoPerfil)
-                                select x).FirstOrDefault();
-                if (consulta != null)
-                {
-                    consulta.NombrePerfil = P_Entidad.NombrePerfil;
-                    consulta.Estado = P_Entidad.Estado;
-                    contexto.SaveChanges();
-                    resultado = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (contexto != null)
-                    contexto.Dispose();
-            }
-
-            return resultado;
-        }
-
-        #endregion
-
         #region Recorrido
         public bool AgregarRecorrido(Recorrido P_Entidad)
         {
@@ -722,8 +581,8 @@ namespace AccesoDatos
 
         #endregion
 //--------------------------------------------------------------------------------------------------------
-        #region Usuario
-        public bool AgregarUsuario(Usuario P_Entidad)
+        #region USUARIO
+        public bool AgregarUsuario(USUARIOS P_Entidad)
         {
             bool resultado = false;
             Proyecto2_SistemaRuteoContext contexto = null;
@@ -731,7 +590,7 @@ namespace AccesoDatos
             try
             {
                 contexto = new Proyecto2_SistemaRuteoContext();
-                contexto.Usuario.Add(P_Entidad);
+                contexto.USUARIOS.Add(P_Entidad);
                 contexto.SaveChanges();
                 resultado = true;
             }
@@ -748,17 +607,17 @@ namespace AccesoDatos
             return resultado;
         }
 
-        public List<Usuario> ConsultarUsuario(Usuario P_Entidad)
+        public List<USUARIOS> ConsultarUsuario(USUARIOS P_Entidad)
         {
             Proyecto2_SistemaRuteoContext contexto = null;
-            List<Usuario> lista = new List<Usuario>();
+            List<USUARIOS> lista = new List<USUARIOS>();
             try
             {
                 contexto = new Proyecto2_SistemaRuteoContext();
 
                 if (P_Entidad.ID_USUARIO == 0)
                 {
-                    var consulta = (from x in contexto.Usuario
+                    var consulta = (from x in contexto.USUARIOS
                                     select x).ToList();
 
                     if (consulta != null)
@@ -771,7 +630,7 @@ namespace AccesoDatos
                 }
                 else
                 {
-                    var consulta = (from x in contexto.Usuario
+                    var consulta = (from x in contexto.USUARIOS
                                     where x.ID_USUARIO.Equals(P_Entidad.ID_USUARIO)
                                     select x).ToList();
 
@@ -797,7 +656,7 @@ namespace AccesoDatos
             return lista;
         }
 
-        public bool EliminarUsuario(Usuario P_Entidad)
+        public bool EliminarUsuario(USUARIOS P_Entidad)
         {
             bool resultado = false;
             Proyecto2_SistemaRuteoContext contexto = null;
@@ -805,13 +664,13 @@ namespace AccesoDatos
             try
             {
                 contexto = new Proyecto2_SistemaRuteoContext();
-                var consulta = (from x in contexto.Usuario
+                var consulta = (from x in contexto.USUARIOS
                                 where x.ID_USUARIO.Equals(P_Entidad.ID_USUARIO)
                                 select x).FirstOrDefault();
 
                 if (consulta != null)
                 {
-                    contexto.Usuario.Remove(consulta);
+                    contexto.USUARIOS.Remove(consulta);
                     contexto.SaveChanges();
                     resultado = true;
                 }
@@ -829,7 +688,7 @@ namespace AccesoDatos
             return resultado;
         }
 
-        public bool ModificarUsuario(Usuario P_Entidad)
+        public bool ModificarUsuario(USUARIOS P_Entidad)
         {
             bool resultado = false;
             Proyecto2_SistemaRuteoContext contexto = null;
@@ -837,7 +696,7 @@ namespace AccesoDatos
             try
             {
                 contexto = new Proyecto2_SistemaRuteoContext();
-                var consulta = (from x in contexto.Usuario
+                var consulta = (from x in contexto.USUARIOS
                                 where x.ID_USUARIO.Equals(P_Entidad.ID_USUARIO)
                                 select x).FirstOrDefault();
                 if (consulta != null)

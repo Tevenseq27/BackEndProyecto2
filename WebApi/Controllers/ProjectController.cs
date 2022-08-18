@@ -99,37 +99,6 @@ namespace WebApi.Controllers
         }
         #endregion
 
-        #region Perfil
-        [HttpPost]
-        [Route(nameof(AgregarPerfil))]
-        public bool AgregarPerfil(Perfil P_Entidad)
-        {
-            return _ilogica.AgregarPerfil(P_Entidad);
-        }
-
-        [HttpGet]
-        [Route(nameof(ConsultarPerfil))]
-        public IEnumerable<Perfil> ConsultarPerfil()
-        {
-            Perfil P_Entidad = new Perfil();
-            return _ilogica.ConsultarPerfil(P_Entidad);
-        }
-
-        [HttpPost]
-        [Route(nameof(ModificarPerfil))]
-        public bool ModificarPerfil(Perfil Entidad)
-        {
-            return _ilogica.ModificarPerfil(Entidad);
-        }
-
-        [HttpPost]
-        [Route(nameof(EliminarPerfil))]
-        public bool EliminarPerfil(Perfil Entidad)
-        {
-            return _ilogica.EliminarPerfil(Entidad);
-        }
-        #endregion
-
         #region Recorrido
         [HttpPost]
         [Route(nameof(AgregarRecorrido))]
@@ -195,29 +164,29 @@ namespace WebApi.Controllers
         #region Usuario
         [HttpPost]
         [Route(nameof(AgregarUsuario))]
-        public bool AgregarUsuario(Usuario P_Entidad)
+        public bool AgregarUsuario(USUARIOS P_Entidad)
         {
             return _ilogica.AgregarUsuario(P_Entidad);
         }
 
         [HttpGet]
         [Route(nameof(ConsultarUsuario))]
-        public IEnumerable<Usuario> ConsultarUsuario()
+        public IEnumerable<USUARIOS> ConsultarUsuario()
         {
-            Usuario P_Entidad = new Usuario();
+            USUARIOS P_Entidad = new USUARIOS();
             return _ilogica.ConsultarUsuario(P_Entidad);
         }
 
         [HttpPost]
         [Route(nameof(ModificarUsuario))]
-        public bool ModificarUsuario(Usuario Entidad)
+        public bool ModificarUsuario(USUARIOS Entidad)
         {
             return _ilogica.ModificarUsuario(Entidad);
         }
 
         [HttpPost]
         [Route(nameof(EliminarUsuario))]
-        public bool EliminarUsuario(Usuario Entidad)
+        public bool EliminarUsuario(USUARIOS Entidad)
         {
             return _ilogica.EliminarUsuario(Entidad);
         }

@@ -17,10 +17,9 @@ namespace Entidades.Entities
 
         public virtual DbSet<Bus> Bus { get; set; }
         public virtual DbSet<Chofer> Chofer { get; set; }
-        public virtual DbSet<Perfil> Perfil { get; set; }
         public virtual DbSet<Recorrido> Recorrido { get; set; }
         public virtual DbSet<Ruta> Ruta { get; set; }
-        public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<USUARIOS> USUARIOS { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -92,22 +91,6 @@ namespace Entidades.Entities
                     .IsFixedLength();
             });
 
-            modelBuilder.Entity<Perfil>(entity =>
-            {
-                entity.HasKey(e => e.CodigoPerfil)
-                    .HasName("PK__Perfil__E317F5E6F68EE274");
-
-                entity.Property(e => e.CodigoPerfil).HasColumnName("codigo_perfil");
-
-                entity.Property(e => e.Estado).HasColumnName("estado");
-
-                entity.Property(e => e.NombrePerfil)
-                    .IsRequired()
-                    .HasColumnName("nombre_perfil")
-                    .HasMaxLength(255)
-                    .IsFixedLength();
-            });
-
             modelBuilder.Entity<Recorrido>(entity =>
             {
                 entity.Property(e => e.Estado)
@@ -176,57 +159,49 @@ namespace Entidades.Entities
                     .HasColumnType("text");
             });
 
-            modelBuilder.Entity<Usuario>(entity =>
+            modelBuilder.Entity<USUARIOS>(entity =>
             {
-                entity.HasKey(e => e.IdUsuario);
+                entity.HasKey(e => e.ID_USUARIO);
 
-                entity.Property(e => e.IdUsuario)
-                    .HasColumnName("id_usuario")
-                    .HasMaxLength(20)
+                entity.Property(e => e.ID_USUARIO)
+                    .HasColumnName("ID_USUARIO")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.EMAIL)
+                    .IsRequired()
+                    .HasColumnName("EMAIL")
+                    .HasMaxLength(150)
                     .IsFixedLength();
 
-                entity.Property(e => e.Apellido1Usuario)
+                entity.Property(e => e.PASS)
                     .IsRequired()
-                    .HasColumnName("apellido1_usuario")
+                    .HasColumnName("PASS")
                     .HasMaxLength(25)
                     .IsFixedLength();
 
-                entity.Property(e => e.Apellido2Usuario)
+                entity.Property(e => e.SALT)
                     .IsRequired()
-                    .HasColumnName("apellido2_usuario")
-                    .HasMaxLength(25)
-                    .IsFixedLength();
-
-                entity.Property(e => e.CodPerfilUsuario).HasColumnName("cod_perfil_usuario");
-
-                entity.Property(e => e.ContraseñaUsuario)
-                    .IsRequired()
-                    .HasColumnName("contraseña_usuario")
+                    .HasColumnName("SALT")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.CorreoUsuario)
+                entity.Property(e => e.NOMBRE)
                     .IsRequired()
-                    .HasColumnName("correo_usuario")
+                    .HasColumnName("NOMBRE")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Nombre1Usuario)
+                entity.Property(e => e.APELLIDOS)
                     .IsRequired()
-                    .HasColumnName("nombre1_usuario")
-                    .HasMaxLength(25)
+                    .HasColumnName("APELLIDOS")
+                    .HasMaxLength(50)
                     .IsFixedLength();
 
-                entity.Property(e => e.Nombre2Usuario)
-                    .HasColumnName("nombre2_usuario")
-                    .HasMaxLength(25)
+                entity.Property(e => e.TIPO)
+                    .HasColumnName("TIPO")
+                    .HasMaxLength(15)
                     .IsFixedLength();
 
-                entity.HasOne(d => d.CodPerfilUsuarioNavigation)
-                    .WithMany(p => p.Usuario)
-                    .HasForeignKey(d => d.CodPerfilUsuario)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Usuario_Usuario");
             });
 
             OnModelCreatingPartial(modelBuilder);

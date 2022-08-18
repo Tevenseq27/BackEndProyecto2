@@ -71,29 +71,6 @@ namespace Negocio.Clases
 
         #endregion
 
-        #region Perfil
-        public bool AgregarPerfil(Perfil P_Entidad)
-        {
-            return _iaccesoSQL.AgregarPerfil(P_Entidad);
-        }
-
-        public List<Perfil> ConsultarPerfil(Perfil P_Entidad)
-        {
-            return _iaccesoSQL.ConsultarPerfil(P_Entidad);
-        }
-
-        public bool EliminarPerfil(Perfil P_Entidad)
-        {
-            return _iaccesoSQL.EliminarPerfil(P_Entidad);
-        }
-
-        public bool ModificarPerfil(Perfil P_Entidad)
-        {
-            return _iaccesoSQL.ModificarPerfil(P_Entidad);
-        }
-
-        #endregion
-
         #region Recorrido
         public bool AgregarRecorrido(Recorrido P_Entidad)
         {
@@ -141,20 +118,20 @@ namespace Negocio.Clases
         #endregion
 
         #region Usuarios
-        public bool AgregarUsuario(Usuario P_Entidad)
+        public bool AgregarUsuario(USUARIOS P_Entidad)
         {
             return _iaccesoSQL.AgregarUsuario(P_Entidad);
         }
-        public List<Usuario> ConsultarUsuario(Usuario P_Entidad)
+        public List<USUARIOS> ConsultarUsuario(USUARIOS P_Entidad)
         {
             return _iaccesoSQL.ConsultarUsuario(P_Entidad);
         }
-        public bool EliminarUsuario(Usuario P_Entidad)
+        public bool EliminarUsuario(USUARIOS P_Entidad)
         {
             return _iaccesoSQL.EliminarUsuario(P_Entidad);
         }
 
-        public bool ModificarUsuario(Usuario P_Entidad)
+        public bool ModificarUsuario(USUARIOS P_Entidad)
         {
             return _iaccesoSQL.ModificarUsuario(P_Entidad);
         }

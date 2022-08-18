@@ -45,20 +45,12 @@ namespace AccesoDatos.Interfaces
 
         #region Usuario
 
-        bool AgregarUsuario(Usuario P_Entidad);
-        bool ModificarUsuario(Usuario P_Entidad);
-        bool EliminarUsuario(Usuario P_Entidad);
-        List<Usuario> ConsultarUsuario(Usuario P_Entidad);
+        bool AgregarUsuario(USUARIOS P_Entidad);
+        bool ModificarUsuario(USUARIOS P_Entidad);
+        bool EliminarUsuario(USUARIOS P_Entidad);
+        List<USUARIOS> ConsultarUsuario(USUARIOS P_Entidad); 
 
         #endregion
 
-        #region Perfil
-
-        bool AgregarPerfil(Perfil P_Entidad);
-        bool ModificarPerfil(Perfil P_Entidad);
-        bool EliminarPerfil(Perfil P_Entidad);
-        List<Perfil> ConsultarPerfil(Perfil P_Entidad);
-
-        #endregion
     }
 }
