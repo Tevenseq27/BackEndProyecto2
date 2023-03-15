@@ -13,5 +13,7 @@ namespace Entidades.Entities
         public string APELLIDOS { get; set; }
         public string TIPO { get; set; }
 
+        //jgkjgktjg
+
     }
 }
